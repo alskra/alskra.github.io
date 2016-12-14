@@ -1,0 +1,45 @@
+
+<form class="form-vacancy-feedback modal">
+  <button class="modal__btn-close btn icon icon-close arcticmodal-close"></button>
+  <header class="modal__header">
+    <h1 class="modal__title">Форма отправки резюме</h1>
+  </header>
+  <div class="form-vacancy-feedback__row row-form">
+    <input type="text" placeholder="ФИО*" class="field field_type_1">
+  </div>
+  <div class="form-vacancy-feedback__row form-vacancy-feedback__row_1">
+    <div class="form-vacancy-feedback__row form-vacancy-feedback__row_1_1 row-form">
+      <input type="text" placeholder="Семейное положение" class="field field_type_1">
+    </div>
+    <div class="form-vacancy-feedback__row form-vacancy-feedback__row_1_2 row-form">
+      <input type="number" min="16" placeholder="Возраст" class="field field_type_1">
+    </div>
+  </div>
+  <div class="form-vacancy-feedback__row row-form">
+    <input type="tel" placeholder="Телефон" class="field field_type_1">
+  </div>
+  <div class="form-vacancy-feedback__row row-form">
+    <input type="email" placeholder="Ваш E-Mail*" class="field field_type_1 field_invalid">
+    <div class="info-form info-form_error">Введите Ваш E-Mail</div>
+  </div>
+  <div class="form-vacancy-feedback__row row-form">
+    <textarea placeholder="Образование" class="field field_area field_collapsible field_type_1"></textarea>
+  </div>
+  <div class="form-vacancy-feedback__row row-form">
+    <textarea placeholder="Опыт работы" class="field field_area field_collapsible field_type_1"></textarea>
+  </div>
+  <footer class="modal__footer">
+    <div class="form-vacancy-feedback__row form-vacancy-feedback__row_2">
+      <div class="form-vacancy-feedback__row form-vacancy-feedback__row_2_1 row-form">
+        <label class="upload-file">
+          <input type="file" class="upload-file__field">
+          <div class="upload-file__btn btn js-tooltip" data-placement="right" title="Прикрепить файл резюме"></div>
+          <div class="upload-file__src"></div>
+        </label>
+      </div>
+      <div class="form-vacancy-feedback__row form-vacancy-feedback__row_2_2 row-form">
+        <button type="submit" class="btn btn_type_1"><span class="btn__label">Отправить</span></button>
+      </div>
+    </div>
+  </footer>
+</form>
