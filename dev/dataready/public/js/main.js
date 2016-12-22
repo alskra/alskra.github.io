@@ -139,8 +139,7 @@ $(function () {
 });
 function correctImg() {
     $('.service-item__img-wrap').each(function () {
-        $(this).css('max-height', '').css('max-height', $(this).parent('.service-item__col_1').height());
-        $(this).find('.service-item__img').css('max-height', '').css('max-height', $(this).height());
+        $(this).find('.service-item__img').css('max-height', '').css('max-height', $(this).closest('.service-item__col_1').height());
     });
     setTimeout(function () {
         correctImg();
