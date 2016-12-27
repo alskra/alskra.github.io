@@ -10,13 +10,13 @@ $(function () {
             historyFlag = true;
             var sect = $('[data-id="' + hash.split('#')[1] + '"]');
             if (hash == ''){
-                history.replaceState(null, null, '#main');
+                history.replaceState(null, document.title, '#main');
                 $('.wrapper').moveTo(1);
             }
             else if (sect.length){
                 if (Modernizr.mq('(min-width: ' + ($screenMd) + 'px)') && !sect.hasClass('section')){
                     sect = $('.section_services_2');
-                    history.replaceState(null, null, '#services-page-2');
+                    history.replaceState(null, document.title, '#services-page-2');
                 }
                 $('.wrapper').moveTo(sect.data('index'));
             }
@@ -36,10 +36,10 @@ $(function () {
                 animationTime: 500,             // AnimationTime let you define how long each section takes to animate
                 pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
                 updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-                beforeMove: function(index) {
+                beforeMove: function(index) {console.log(index);
                     if (!historyFlag){
                         historyFlag = true;
-                        history.pushState(null, null, '#' + $('.section').eq(index - 1).data('id'));
+                        history.pushState(null, document.title, '#' + $('.section').eq(index - 1).data('id'));
                     }
                     $('body').attr('data-page', $('.section').eq(index - 1).data('id'));
                 },  // This option accepts a callback function. The function will be called before the page moves.
@@ -66,15 +66,13 @@ $(function () {
 
         $('body').on('click', '.menu__btn', function (e) {
             e.preventDefault();
-            history.pushState(null, null, $(this).attr('href'));
-            updatePage($(this).attr('href'));
+            $('.wrapper').moveTo($('[data-id="' + $(this).attr('href').split('#')[1] + '"]').data('index'));
             $('.menu').removeClass('menu_opened').fadeOut(500);
         });
 
         $('body').on('click', '.link_to-top', function (e) {
             e.preventDefault();
-            history.pushState(null, null, $(this).attr('href'));
-            updatePage($(this).attr('href'));
+            $('.wrapper').moveTo(1);
         });
     }
 });
@@ -236,8 +234,25 @@ function reInitPerfectScrollbar() {
 }
 $(function () {
     reInitPerfectScrollbar();
-    $('.ps-scroll').on('touchmove', function (e) {
-        //e.stopPropagation();
+    $('.ps-scroll').on('ps-y-reach-start', function (e) {
+        $(this).addClass('ps-y-reach-start').removeClass('ps-y-reach-end');
+    }).on('swipedown', function (e) {
+        e.stopPropagation();
+        if ($(this).hasClass('ps-y-reach-start') || !$(this).hasClass('ps-active-y')){
+            $('.wrapper').moveUp();
+        }
+    }).on('ps-scroll-down', function (e) {
+        $(this).removeClass('ps-y-reach-start');
+    });
+    $('.ps-scroll').on('ps-y-reach-end', function (e) {
+        $(this).addClass('ps-y-reach-end').removeClass('ps-y-reach-start');
+    }).on('swipeup', function (e) {
+        e.stopPropagation();
+        if ($(this).hasClass('ps-y-reach-end') || !$(this).hasClass('ps-active-y')){
+            $('.wrapper').moveDown();
+        }
+    }).on('ps-scroll-up', function (e) {
+        $(this).removeClass('ps-y-reach-end');
     });
 });
 $.ikSelect.extendDefaults({autoWidth: false, ddFullWidth: false, dynamicWidth: false, extractLink: false, ddMaxHeight: 200, onShow: function (e){
@@ -309,7 +324,7 @@ $(function () {
                 success: function(data, el, responce) {
                     var modal = $(responce);
                     galleryItems.forEach(function (href) {
-                        $('<div class="gallery__item slick-slide"><img src="' + href + '" alt class="img-object-fit scale-down" onload="objectFit(this)"></div>').appendTo(modal.find('.gallery'));
+                        $('<div class="gallery__item slick-slide"><img data-lazy="' + href + '" alt class="img-object-fit scale-down" onload="objectFit(this)"></div>').appendTo(modal.find('.gallery'));
                     });
                     data.body.append(modal);
                 }
