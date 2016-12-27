@@ -155,27 +155,19 @@ $(function () {
         correctDec5();
     }
 });
-function correctImg() {
+function serviceItem() {
     $('.service-item__img').each(function () {
-        $(this).css('max-height', '').css('max-height', $(this).closest('.service-item__img-wrap').height());
+        $(this).css('max-height', $(this).closest('.service-item__col_1').height());
+    });
+    $('.service-item__col_2').each(function () {
+        $(this).trigger('destroy').dotdotdot();
     });
     setTimeout(function () {
-        correctImg();
-    }, 100);
+        serviceItem();
+    }, 200);
 }
 $(function () {
-    $(window).on('resize.serviceItem', function () {
-        $('.service-item__img').each(function () {
-            $(this).css('max-height', $(this).closest('.service-item__col_1').height());
-        });
-        $('.service-item__col_2').each(function () {
-            $(this).trigger('destroy').dotdotdot();
-        });
-    }).triggerHandler('resize.serviceItem');
-
-    setTimeout(function () {
-        $(window).triggerHandler('resize.serviceItem');
-    }, 500);
+    serviceItem();
 });
 $(function () {
     $('.gallery-slider-2__item').each(function (i) {
