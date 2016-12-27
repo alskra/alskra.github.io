@@ -6,10 +6,10 @@ var $screenSm = 1024,
 $(function () {
     if ($('.wrapper').length){
         var historyFlag = false;
-        function updatePage() {
+        function updatePage(hash) {
             historyFlag = true;
-            var sect = $('[data-id="' + window.location.hash.split('#')[1] + '"]');
-            if (window.location.hash == ''){
+            var sect = $('[data-id="' + hash.split('#')[1] + '"]');
+            if (hash == ''){
                 history.replaceState(null, null, '#main');
                 $('.wrapper').moveTo(1);
             }
@@ -53,10 +53,10 @@ $(function () {
                 // the browser's width is less than 600, the fallback will kick in.
                 direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
             });
-            updatePage();
+            updatePage(window.location.hash);
         }).on('popstate', function (e) {
             if (!historyFlag){
-                updatePage();
+                updatePage(window.location.hash);
             }
         }).triggerHandler('resize.onepage_scrollInit');
 
@@ -65,7 +65,16 @@ $(function () {
         });
 
         $('body').on('click', '.menu__btn', function (e) {
+            e.preventDefault();
+            history.pushState(null, null, $(this).attr('href'));
+            updatePage($(this).attr('href'));
             $('.menu').removeClass('menu_opened').fadeOut(500);
+        });
+
+        $('body').on('click', '.link_to-top', function (e) {
+            e.preventDefault();
+            history.pushState(null, null, $(this).attr('href'));
+            updatePage($(this).attr('href'));
         });
     }
 });
@@ -108,11 +117,7 @@ $(function () {
 
     $(window).on('resize.mainSlider', function () {
         $('.main-slider__col_1').each(function () {
-            var height = $(this).closest('.container-fluid').height();
-            $(this).trigger('destroy');
-            $(this).dotdotdot({
-                height: height
-            });
+            $(this).trigger('destroy').dotdotdot();
         });
     }).triggerHandler('resize.mainSlider');
 });
@@ -161,22 +166,25 @@ function correctImg() {
 $(function () {
     $(window).on('resize.serviceItem', function () {
         $('.service-item__img').each(function () {
-            $(this).css('max-height', '').css('max-height', $(this).closest('.service-item__col_1').height());
+            $(this).css('max-height', $(this).closest('.service-item__col_1').height());
         });
         $('.service-item__col_2').each(function () {
-            var height = $(this).closest('.service-item').height();
-            $(this).trigger('destroy');
-            $(this).dotdotdot({
-                height: height
-            });
+            $(this).trigger('destroy').dotdotdot();
         });
     }).triggerHandler('resize.serviceItem');
+
+    setTimeout(function () {
+        $(window).triggerHandler('resize.serviceItem');
+    }, 200);
 });
 $(function () {
+    $('.gallery-slider-2__item').each(function (i) {
+        $(this).data('id', i);
+    });
     $('.gallery-slider-2 .slick-slider').slick({
         dots: false,
         arrows: true,
-        infinite: false,
+        infinite: true,
         speed: 300,
         fade: false,
         cssEase: 'ease',
@@ -207,8 +215,7 @@ $(function () {
 
     $(window).on('resize.gallerySlider2', function () {
         $('.gallery-slider-2__caption').each(function () {
-            $(this).trigger('destroy');
-            $(this).dotdotdot();
+            $(this).trigger('destroy').dotdotdot();
         });
     }).triggerHandler('resize.gallerySlider2');
 });
@@ -282,8 +289,13 @@ $(function () {
 });
 $(function () {
     $('body').on('click', '[data-toggle="gallery"]', function(){
-        var galleryItems = $('[data-gallery="' + $(this).data('gallery') + '"]');
-        var initialSlide = galleryItems.index(this);
+        var galleryItems = [];
+        $('[data-gallery="' + $(this).data('gallery') + '"]').each(function () {
+            if (!($(this).closest('.slick-slide').hasClass('slick-cloned'))){
+                galleryItems.push($(this).data('href'));
+            }
+        });
+        var initialSlide = $(this).data('id');
         $.arcticmodal({
             type: 'ajax',
             url: 'popups/gallery.html',
@@ -293,8 +305,8 @@ $(function () {
                 dataType: 'html',
                 success: function(data, el, responce) {
                     var modal = $(responce);
-                    galleryItems.each(function () {
-                        $('<div class="gallery__item slick-slide"><img src="' + $(this).data('href') + '" alt class="img-object-fit scale-down" onload="objectFit(this)"></div>').appendTo(modal.find('.gallery'));
+                    galleryItems.forEach(function (href) {
+                        $('<div class="gallery__item slick-slide"><img src="' + href + '" alt class="img-object-fit scale-down" onload="objectFit(this)"></div>').appendTo(modal.find('.gallery'));
                     });
                     data.body.append(modal);
                 }
