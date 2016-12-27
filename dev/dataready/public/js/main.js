@@ -175,9 +175,6 @@ $(function () {
 
     setTimeout(function () {
         $(window).triggerHandler('resize.serviceItem');
-    }, 200);
-    setTimeout(function () {
-        $(window).triggerHandler('resize.serviceItem');
     }, 500);
 });
 $(function () {
