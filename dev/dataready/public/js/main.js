@@ -158,7 +158,7 @@ function serviceItem() {
         $(this).css('max-height', '').css('max-height', $(this).closest('.service-item__col_1').height());
     });
     $('.service-item__col_2').each(function () {
-        $(this).height('100%').trigger('destroy').dotdotdot().height('auto');
+        $(this).trigger('destroy').height('100%').dotdotdot().height('');
     });
 }
 $(function () {
@@ -167,6 +167,8 @@ $(function () {
             serviceItem();
         }, 500);
     }).triggerHandler('resize.serviceItem');
+
+
 });
 if (document.documentElement.style.mixBlendMode !== undefined){
     $('html').addClass('mixblendmode');
