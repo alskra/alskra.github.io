@@ -179,7 +179,7 @@ $(function () {
     }, 200);
     setTimeout(function () {
         clearInterval(sI);
-    }, 60000);
+    }, 15000);
 
 });
 if (document.documentElement.style.mixBlendMode !== undefined){
