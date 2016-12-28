@@ -158,23 +158,15 @@ function serviceItem() {
         $(this).css('max-height', '').css('max-height', $(this).closest('.service-item__col_1').height());
     });
     $('.service-item__col_2').each(function () {
-        $(this).trigger('destroy').dotdotdot();
+        $(this).height('100%').trigger('destroy').dotdotdot().height('auto');
     });
 }
 $(function () {
     $(window).on('resize.serviceItem', function () {
         setTimeout(function () {
             serviceItem();
-        }, 200);
-    });
-
-    var sI = setInterval(function () {
-        serviceItem();
-    }, 200);
-    setTimeout(function () {
-        clearInterval(sI);
-    }, 2000);
-
+        }, 500);
+    }).triggerHandler('resize.serviceItem');
 });
 if (document.documentElement.style.mixBlendMode !== undefined){
     $('html').addClass('mixblendmode');
