@@ -160,22 +160,16 @@ function serviceItem() {
     $('.service-item__col_2').each(function () {
         $(this).trigger('destroy').dotdotdot();
     });
-    setTimeout(function () {
-        serviceItem();
-    }, 100);
 }
 $(function () {
     $(window).on('resize.serviceItem', function () {
-        $('.service-item__img').each(function () {
-            $(this).css('max-height', '').css('max-height', $(this).closest('.service-item__col_1').height());
-        });
-        $('.service-item__col_2').each(function () {
-            $(this).trigger('destroy').dotdotdot();
-        });
-    }).triggerHandler('resize.serviceItem');
+        setTimeout(function () {
+            serviceItem();
+        }, 200);
+    });
 
     var sI = setInterval(function () {
-        $(window).triggerHandler('resize.serviceItem');
+        serviceItem();
     }, 200);
     setTimeout(function () {
         clearInterval(sI);
