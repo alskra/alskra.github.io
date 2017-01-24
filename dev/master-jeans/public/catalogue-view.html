@@ -54,7 +54,7 @@
       <!-- /Header-->
       <!-- Content-->
       <main class="content">
-        <section class="section">
+        <section class="section section_catalogue">
           <header class="section__header">
             <div class="container-fluid">
               <div class="row">
@@ -72,9 +72,9 @@
           </header>
           <div class="container-fluid">
             <div class="row">
-              <aside class="aside-catalogue col-sm-3">
-                <h2 class="title hidden-xs hidden-sm hidden-md hidden-lg">Категории</h2>
-                <button type="button" class="toggle-menu-catalogue"><span class="toggle-menu-catalogue__icon"><span class="toggle-menu-catalogue__line"></span><span class="toggle-menu-catalogue__line"></span><span class="toggle-menu-catalogue__line"></span></span><span class="toggle-menu-catalogue__label">Категории</span></button>
+              <aside class="aside-catalogue aside-catalogue_fixed-opened col-sm-3">
+                <h2 class="title hidden-xs">Категории</h2>
+                <button class="toggle-menu-catalogue hidden-sm hidden-md hidden-lg" type="button"><span class="toggle-menu-catalogue__icon"><span class="toggle-menu-catalogue__line"></span><span class="toggle-menu-catalogue__line"></span><span class="toggle-menu-catalogue__line"></span></span><span class="toggle-menu-catalogue__label">Категории</span></button>
                 <!-- Menu-catalogue-->
                 <nav class="menu-catalogue">
                   <div class="menu-catalogue__item menu-catalogue__item_lvl_1"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_1"><span class="menu-catalogue__label menu-catalogue__label_lvl_1">Аксессуары</span></a>
@@ -152,83 +152,81 @@
                     </select>
                   </div>
                 </div>
+                <!-- Products-list-->
+                <div class="products-list products-list_catalogue">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <article class="product-item product-item_label_new"><a href="item-view.html" class="product-item__img-wrap"><img class="product-item__img img-object-fit" src="files/pics/products/Levi's®--Джинсы-511---8900руб.jpg" title="Джинсы мужские синие Levi's" alt="Джинсы мужские синие Levi's" onload="objectFit(this)">
+                          <div class="product-item__overlay">
+                            <button class="product-item__btn-view btn btn_type_2" type="button"><span class="btn__label">Подробнее</span></button>
+                          </div></a>
+                        <h2 class="product-item__title"><a href="item-view.html" class="product-item__title-link">Джинсы мужские синие Levi's</a>
+                        </h2>
+                        <div class="product-item__price-box"><span class="product-item__price product-item__price_new">8&nbsp;600&nbsp;<span class="fa fa-rub"></span></span> <span class="product-item__price product-item__price_old">8&nbsp;900&nbsp;<span class="fa fa-rub"></span></span></div>
+                      </article>
+                      <article class="product-item product-item_label_new"><a href="item-view.html" class="product-item__img-wrap"><img class="product-item__img img-object-fit" src="files/pics/products/Levi's®--Джинсы-511---8500руб.jpg" title="Джинсы мужские синие Levi's" alt="Джинсы мужские синие Levi's" onload="objectFit(this)">
+                          <div class="product-item__overlay">
+                            <button class="product-item__btn-view btn btn_type_2" type="button"><span class="btn__label">Подробнее</span></button>
+                          </div></a>
+                        <h2 class="product-item__title"><a href="item-view.html" class="product-item__title-link">Джинсы мужские синие Levi's</a>
+                        </h2>
+                        <div class="product-item__price-box"><span class="product-item__price">8&nbsp;590&nbsp;<span class="fa fa-rub"></span></span></div>
+                      </article>
+                      <article class="product-item product-item_label_new"><a href="item-view.html" class="product-item__img-wrap"><img class="product-item__img img-object-fit" src="files/pics/products/United-Colors-of-Benetton-Джинсы---2799руб.jpg" title="Джинсы мужские синие United Colors of Benetton" alt="Джинсы мужские синие United Colors of Benetton" onload="objectFit(this)">
+                          <div class="product-item__overlay">
+                            <button class="product-item__btn-view btn btn_type_2" type="button"><span class="btn__label">Подробнее</span></button>
+                          </div></a>
+                        <h2 class="product-item__title"><a href="item-view.html" class="product-item__title-link">Джинсы мужские синие United Colors of Benetton</a>
+                        </h2>
+                        <div class="product-item__price-box"><span class="product-item__price">2&nbsp;799&nbsp;<span class="fa fa-rub"></span></span></div>
+                      </article>
+                      <article class="product-item product-item_label_new"><a href="item-view.html" class="product-item__img-wrap"><img class="product-item__img img-object-fit" src="files/pics/products/Topman-Джинсы---4199руб.jpg" title="Джинсы мужские синие Topman" alt="Джинсы мужские синие Topman" onload="objectFit(this)">
+                          <div class="product-item__overlay">
+                            <button class="product-item__btn-view btn btn_type_2" type="button"><span class="btn__label">Подробнее</span></button>
+                          </div></a>
+                        <h2 class="product-item__title"><a href="item-view.html" class="product-item__title-link">Джинсы мужские синие Topman</a>
+                        </h2>
+                        <div class="product-item__price-box"><span class="product-item__price">4&nbsp;190&nbsp;<span class="fa fa-rub"></span></span></div>
+                      </article>
+                      <article class="product-item"><a href="item-view.html" class="product-item__img-wrap"><img class="product-item__img img-object-fit" src="files/pics/products/Screen-Shot-2016-11-02-at-18.49.jpg" title="Джинсы мужские синие Topman" alt="Джинсы мужские синие Topman" onload="objectFit(this)">
+                          <div class="product-item__overlay">
+                            <button class="product-item__btn-view btn btn_type_2" type="button"><span class="btn__label">Подробнее</span></button>
+                          </div></a>
+                        <h2 class="product-item__title"><a href="item-view.html" class="product-item__title-link">Джинсы мужские синие Topman</a>
+                        </h2>
+                        <div class="product-item__price-box"><span class="product-item__price">3&nbsp;790&nbsp;<span class="fa fa-rub"></span></span></div>
+                      </article>
+                      <article class="product-item"><a href="item-view.html" class="product-item__img-wrap"><img class="product-item__img img-object-fit" src="files/pics/products/Screen-Shot-2016-11-02-at-18.51.jpg" title="Джинсы мужские синие United Colors of Benetton " alt="Джинсы мужские синие United Colors of Benetton " onload="objectFit(this)">
+                          <div class="product-item__overlay">
+                            <button class="product-item__btn-view btn btn_type_2" type="button"><span class="btn__label">Подробнее</span></button>
+                          </div></a>
+                        <h2 class="product-item__title"><a href="item-view.html" class="product-item__title-link">Джинсы мужские синие United Colors of Benetton </a>
+                        </h2>
+                        <div class="product-item__price-box"><span class="product-item__price">2&nbsp;799&nbsp;<span class="fa fa-rub"></span></span></div>
+                      </article>
+                      <article class="product-item product-item_label_new"><a href="item-view.html" class="product-item__img-wrap"><img class="product-item__img img-object-fit" src="files/pics/products/Levi's®--Джинсы-511---8500руб.jpg" title="Джинсы мужские синие Levi's" alt="Джинсы мужские синие Levi's" onload="objectFit(this)">
+                          <div class="product-item__overlay">
+                            <button class="product-item__btn-view btn btn_type_2" type="button"><span class="btn__label">Подробнее</span></button>
+                          </div></a>
+                        <h2 class="product-item__title"><a href="item-view.html" class="product-item__title-link">Джинсы мужские синие Levi's</a>
+                        </h2>
+                        <div class="product-item__price-box"><span class="product-item__price">8&nbsp;590&nbsp;<span class="fa fa-rub"></span></span></div>
+                      </article>
+                      <article class="product-item product-item_label_new"><a href="item-view.html" class="product-item__img-wrap"><img class="product-item__img img-object-fit" src="files/pics/products/United-Colors-of-Benetton-Джинсы---2799руб.jpg" title="Джинсы мужские синие United Colors of Benetton" alt="Джинсы мужские синие United Colors of Benetton" onload="objectFit(this)">
+                          <div class="product-item__overlay">
+                            <button class="product-item__btn-view btn btn_type_2" type="button"><span class="btn__label">Подробнее</span></button>
+                          </div></a>
+                        <h2 class="product-item__title"><a href="item-view.html" class="product-item__title-link">Джинсы мужские синие United Colors of Benetton</a>
+                        </h2>
+                        <div class="product-item__price-box"><span class="product-item__price">2&nbsp;799&nbsp;<span class="fa fa-rub"></span></span></div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Products-list-->
+                <div class="btns-box"><a href="javascript:void(0)" class="btn btn_type_3"><span class="btn__icon icon icon-refresh"></span><span class="btn__label">Показать ещё</span></a>
+                </div>
               </div>
-            </div>
-          </div>
-          <!-- Products-list-->
-          <div class="products-list products-list_catalogue">
-            <div class="container-fluid">
-              <div class="row">
-                <article class="product-item product-item_label_new"><a href="item-view.html" class="product-item__img-wrap"><img class="product-item__img img-object-fit" src="files/pics/products/Levi's®--Джинсы-511---8900руб.jpg" title="Джинсы мужские синие Levi's" alt="Джинсы мужские синие Levi's" onload="objectFit(this)">
-                    <div class="product-item__overlay">
-                      <button class="product-item__btn-view btn btn_type_2" type="button"><span class="btn__label">Подробнее</span></button>
-                    </div></a>
-                  <h2 class="product-item__title"><a href="item-view.html" class="product-item__title-link">Джинсы мужские синие Levi's</a>
-                  </h2>
-                  <div class="product-item__price-box"><span class="product-item__price product-item__price_new">8&nbsp;600&nbsp;<span class="fa fa-rub"></span></span> <span class="product-item__price product-item__price_old">8&nbsp;900&nbsp;<span class="fa fa-rub"></span></span></div>
-                </article>
-                <article class="product-item product-item_label_new"><a href="item-view.html" class="product-item__img-wrap"><img class="product-item__img img-object-fit" src="files/pics/products/Levi's®--Джинсы-511---8500руб.jpg" title="Джинсы мужские синие Levi's" alt="Джинсы мужские синие Levi's" onload="objectFit(this)">
-                    <div class="product-item__overlay">
-                      <button class="product-item__btn-view btn btn_type_2" type="button"><span class="btn__label">Подробнее</span></button>
-                    </div></a>
-                  <h2 class="product-item__title"><a href="item-view.html" class="product-item__title-link">Джинсы мужские синие Levi's</a>
-                  </h2>
-                  <div class="product-item__price-box"><span class="product-item__price">8&nbsp;590&nbsp;<span class="fa fa-rub"></span></span></div>
-                </article>
-                <article class="product-item product-item_label_new"><a href="item-view.html" class="product-item__img-wrap"><img class="product-item__img img-object-fit" src="files/pics/products/United-Colors-of-Benetton-Джинсы---2799руб.jpg" title="Джинсы мужские синие United Colors of Benetton" alt="Джинсы мужские синие United Colors of Benetton" onload="objectFit(this)">
-                    <div class="product-item__overlay">
-                      <button class="product-item__btn-view btn btn_type_2" type="button"><span class="btn__label">Подробнее</span></button>
-                    </div></a>
-                  <h2 class="product-item__title"><a href="item-view.html" class="product-item__title-link">Джинсы мужские синие United Colors of Benetton</a>
-                  </h2>
-                  <div class="product-item__price-box"><span class="product-item__price">2&nbsp;799&nbsp;<span class="fa fa-rub"></span></span></div>
-                </article>
-                <article class="product-item product-item_label_new"><a href="item-view.html" class="product-item__img-wrap"><img class="product-item__img img-object-fit" src="files/pics/products/Topman-Джинсы---4199руб.jpg" title="Джинсы мужские синие Topman" alt="Джинсы мужские синие Topman" onload="objectFit(this)">
-                    <div class="product-item__overlay">
-                      <button class="product-item__btn-view btn btn_type_2" type="button"><span class="btn__label">Подробнее</span></button>
-                    </div></a>
-                  <h2 class="product-item__title"><a href="item-view.html" class="product-item__title-link">Джинсы мужские синие Topman</a>
-                  </h2>
-                  <div class="product-item__price-box"><span class="product-item__price">4&nbsp;190&nbsp;<span class="fa fa-rub"></span></span></div>
-                </article>
-                <article class="product-item"><a href="item-view.html" class="product-item__img-wrap"><img class="product-item__img img-object-fit" src="files/pics/products/Screen-Shot-2016-11-02-at-18.49.jpg" title="Джинсы мужские синие Topman" alt="Джинсы мужские синие Topman" onload="objectFit(this)">
-                    <div class="product-item__overlay">
-                      <button class="product-item__btn-view btn btn_type_2" type="button"><span class="btn__label">Подробнее</span></button>
-                    </div></a>
-                  <h2 class="product-item__title"><a href="item-view.html" class="product-item__title-link">Джинсы мужские синие Topman</a>
-                  </h2>
-                  <div class="product-item__price-box"><span class="product-item__price">3&nbsp;790&nbsp;<span class="fa fa-rub"></span></span></div>
-                </article>
-                <article class="product-item"><a href="item-view.html" class="product-item__img-wrap"><img class="product-item__img img-object-fit" src="files/pics/products/Screen-Shot-2016-11-02-at-18.51.jpg" title="Джинсы мужские синие United Colors of Benetton " alt="Джинсы мужские синие United Colors of Benetton " onload="objectFit(this)">
-                    <div class="product-item__overlay">
-                      <button class="product-item__btn-view btn btn_type_2" type="button"><span class="btn__label">Подробнее</span></button>
-                    </div></a>
-                  <h2 class="product-item__title"><a href="item-view.html" class="product-item__title-link">Джинсы мужские синие United Colors of Benetton </a>
-                  </h2>
-                  <div class="product-item__price-box"><span class="product-item__price">2&nbsp;799&nbsp;<span class="fa fa-rub"></span></span></div>
-                </article>
-                <article class="product-item product-item_label_new"><a href="item-view.html" class="product-item__img-wrap"><img class="product-item__img img-object-fit" src="files/pics/products/Levi's®--Джинсы-511---8500руб.jpg" title="Джинсы мужские синие Levi's" alt="Джинсы мужские синие Levi's" onload="objectFit(this)">
-                    <div class="product-item__overlay">
-                      <button class="product-item__btn-view btn btn_type_2" type="button"><span class="btn__label">Подробнее</span></button>
-                    </div></a>
-                  <h2 class="product-item__title"><a href="item-view.html" class="product-item__title-link">Джинсы мужские синие Levi's</a>
-                  </h2>
-                  <div class="product-item__price-box"><span class="product-item__price">8&nbsp;590&nbsp;<span class="fa fa-rub"></span></span></div>
-                </article>
-                <article class="product-item product-item_label_new"><a href="item-view.html" class="product-item__img-wrap"><img class="product-item__img img-object-fit" src="files/pics/products/United-Colors-of-Benetton-Джинсы---2799руб.jpg" title="Джинсы мужские синие United Colors of Benetton" alt="Джинсы мужские синие United Colors of Benetton" onload="objectFit(this)">
-                    <div class="product-item__overlay">
-                      <button class="product-item__btn-view btn btn_type_2" type="button"><span class="btn__label">Подробнее</span></button>
-                    </div></a>
-                  <h2 class="product-item__title"><a href="item-view.html" class="product-item__title-link">Джинсы мужские синие United Colors of Benetton</a>
-                  </h2>
-                  <div class="product-item__price-box"><span class="product-item__price">2&nbsp;799&nbsp;<span class="fa fa-rub"></span></span></div>
-                </article>
-              </div>
-            </div>
-          </div>
-          <!-- /Products-list-->
-          <div class="btns-box">
-            <div class="container-fluid"><a href="javascript:void(0)" class="btn btn_type_3"><span class="btn__icon icon icon-refresh"></span><span class="btn__label">Показать ещё</span></a>
             </div>
           </div>
           <div class="container-fluid">
