@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Item View &mdash; MasterJeans</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#bd212c">
+    <meta name="msapplication-TileColor" content="#bd212c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#333333">
+    <!-- CSS-->
+    <link href="css/main.css" rel="stylesheet">
+    <!-- JS-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4"></script>
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body class="page">
+    <div class="wrapper">
+      <!-- Header-->
+      <header class="header">
+        <div class="header__top">
+          <div class="container-fluid">
+            <button class="toggle-menu hidden-sm hidden-md hidden-lg" type="button"><span class="toggle-menu__line"></span><span class="toggle-menu__line"></span><span class="toggle-menu__line"></span></button><a href="home.html" class="logo"><img class="logo__img hidden-sm hidden-md hidden-lg" src="img/logo-xs.svg" title="MasterJeans" alt="MasterJeans"><img class="logo__img hidden-xs" src="img/logo-sm.png" title="MasterJeans" alt="MasterJeans"></a>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="container-fluid">
+            <!-- Menu-->
+            <nav class="menu">
+              <div class="menu__item menu__item_lvl_1 menu__item_current"><a href="catalogue-men.html" class="menu__btn menu__btn_lvl_1"><span class="menu__label menu__label_lvl_1">Мужчины</span><span class="menu__icon menu__icon_lvl_1 icon icon-angle-right"></span></a>
+              </div>
+              <div class="menu__item menu__item_lvl_1"><a href="javascript:void(0)" class="menu__btn menu__btn_lvl_1"><span class="menu__label menu__label_lvl_1">Женщины</span><span class="menu__icon menu__icon_lvl_1 icon icon-angle-right"></span></a>
+              </div>
+              <div class="menu__item menu__item_lvl_1"><a href="catalogue-kids.html" class="menu__btn menu__btn_lvl_1"><span class="menu__label menu__label_lvl_1">Дети</span><span class="menu__icon menu__icon_lvl_1 icon icon-angle-right"></span></a>
+              </div>
+              <div class="menu__item menu__item_lvl_1"><a href="news.html" class="menu__btn menu__btn_lvl_1"><span class="menu__label menu__label_lvl_1">Новости</span><span class="menu__icon menu__icon_lvl_1 icon icon-angle-right"></span></a>
+              </div>
+              <div class="menu__item menu__item_lvl_1"><a href="brands.html" class="menu__btn menu__btn_lvl_1"><span class="menu__label menu__label_lvl_1">Бренды</span><span class="menu__icon menu__icon_lvl_1 icon icon-angle-right"></span></a>
+              </div>
+              <div class="menu__item menu__item_lvl_1"><a href="shops.html" class="menu__btn menu__btn_lvl_1"><span class="menu__label menu__label_lvl_1">Магазины</span><span class="menu__icon menu__icon_lvl_1 icon icon-angle-right"></span></a>
+              </div>
+            </nav>
+            <!-- /Menu-->
+          </div>
+        </div>
+      </header>
+      <!-- /Header-->
+      <!-- Content-->
+      <main class="content">
+        <section class="section">
+          <header class="section__header">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-5">
+                  <h1 class="section__title section__title_text_left">Каталог Джинсов для мужчин</h1>
+                </div>
+                <div class="col-sm-7">
+                  <!-- Breadcrumbs-->
+                  <nav class="breadcrumbs"><span class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__label">Главная</a><span class="breadcrumbs__icon icon icon-angle-right-2"></span></span><span class="breadcrumbs__item"><a href="catalogue-men.html" class="breadcrumbs__label">Мужчины</a><span class="breadcrumbs__icon icon icon-angle-right-2"></span></span><span class="breadcrumbs__item"><a href="catalogue-view.html" class="breadcrumbs__label">Джинсы</a><span class="breadcrumbs__icon icon icon-angle-right-2"></span></span><span class="breadcrumbs__item"><span class="breadcrumbs__label">Джинсы мужские Levi's 511</span></span>
+                  </nav>
+                  <!-- /Breadcrumbs-->
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="container-fluid">
+            <div class="row">
+              <aside class="aside-catalogue col-sm-3">
+                <h2 class="title hidden-xs hidden-sm hidden-md hidden-lg">Категории</h2>
+                <button type="button" class="toggle-menu-catalogue"><span class="toggle-menu-catalogue__icon"><span class="toggle-menu-catalogue__line"></span><span class="toggle-menu-catalogue__line"></span><span class="toggle-menu-catalogue__line"></span></span><span class="toggle-menu-catalogue__label">Категории</span></button>
+                <!-- Menu-catalogue-->
+                <nav class="menu-catalogue">
+                  <div class="menu-catalogue__item menu-catalogue__item_lvl_1"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_1"><span class="menu-catalogue__label menu-catalogue__label_lvl_1">Аксессуары</span></a>
+                  </div>
+                  <div class="menu-catalogue__item menu-catalogue__item_lvl_1"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_1"><span class="menu-catalogue__label menu-catalogue__label_lvl_1">Активная Одежда</span></a>
+                  </div>
+                  <div class="menu-catalogue__item menu-catalogue__item_lvl_1"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_1"><span class="menu-catalogue__label menu-catalogue__label_lvl_1">Белье</span></a>
+                  </div>
+                  <div class="menu-catalogue__item menu-catalogue__item_lvl_1"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_1"><span class="menu-catalogue__label menu-catalogue__label_lvl_1">Брюки</span></a>
+                  </div>
+                  <div class="menu-catalogue__item menu-catalogue__item_lvl_1"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_1"><span class="menu-catalogue__label menu-catalogue__label_lvl_1">Джемперы</span></a>
+                  </div>
+                  <div class="menu-catalogue__item menu-catalogue__item_lvl_1 menu-catalogue__item_submenu menu-catalogue__item_current menu-catalogue__item_opened"><a href="catalogue-view.html" class="menu-catalogue__btn menu-catalogue__btn_lvl_1"><span class="menu-catalogue__label menu-catalogue__label_lvl_1">Джинсы</span><span class="menu-catalogue__icon menu-catalogue__icon_lvl_1 icon icon-angle-down"></span></a>
+                    <div style="display:block" class="menu-catalogue__submenu menu-catalogue__submenu_lvl_1">
+                      <div class="menu-catalogue__item menu-catalogue__item_lvl_2"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_2"><span class="menu-catalogue__label menu-catalogue__label_lvl_2">Regular Fit</span></a></div>
+                      <div class="menu-catalogue__item menu-catalogue__item_lvl_2"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_2"><span class="menu-catalogue__label menu-catalogue__label_lvl_2">С пятью карманами</span></a></div>
+                    </div>
+                  </div>
+                  <div class="menu-catalogue__item menu-catalogue__item_lvl_1 menu-catalogue__item_submenu"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_1"><span class="menu-catalogue__label menu-catalogue__label_lvl_1">Зимние аксессуары</span><span class="menu-catalogue__icon menu-catalogue__icon_lvl_1 icon icon-angle-down"></span></a>
+                    <div class="menu-catalogue__submenu menu-catalogue__submenu_lvl_1">
+                      <div class="menu-catalogue__item menu-catalogue__item_lvl_2"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_2"><span class="menu-catalogue__label menu-catalogue__label_lvl_2">Подкатегория</span></a></div>
+                      <div class="menu-catalogue__item menu-catalogue__item_lvl_2"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_2"><span class="menu-catalogue__label menu-catalogue__label_lvl_2">Подкатегория</span></a></div>
+                    </div>
+                  </div>
+                  <div class="menu-catalogue__item menu-catalogue__item_lvl_1 menu-catalogue__item_submenu"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_1"><span class="menu-catalogue__label menu-catalogue__label_lvl_1">Зимняя одежда</span><span class="menu-catalogue__icon menu-catalogue__icon_lvl_1 icon icon-angle-down"></span></a>
+                    <div class="menu-catalogue__submenu menu-catalogue__submenu_lvl_1">
+                      <div class="menu-catalogue__item menu-catalogue__item_lvl_2"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_2"><span class="menu-catalogue__label menu-catalogue__label_lvl_2">Подкатегория</span></a></div>
+                      <div class="menu-catalogue__item menu-catalogue__item_lvl_2"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_2"><span class="menu-catalogue__label menu-catalogue__label_lvl_2">Подкатегория</span></a></div>
+                    </div>
+                  </div>
+                  <div class="menu-catalogue__item menu-catalogue__item_lvl_1"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_1"><span class="menu-catalogue__label menu-catalogue__label_lvl_1">Коллекция Marvel</span></a>
+                  </div>
+                  <div class="menu-catalogue__item menu-catalogue__item_lvl_1"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_1"><span class="menu-catalogue__label menu-catalogue__label_lvl_1">Обувь</span></a>
+                  </div>
+                  <div class="menu-catalogue__item menu-catalogue__item_lvl_1"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_1"><span class="menu-catalogue__label menu-catalogue__label_lvl_1">Пиджаки</span></a>
+                  </div>
+                  <div class="menu-catalogue__item menu-catalogue__item_lvl_1"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_1"><span class="menu-catalogue__label menu-catalogue__label_lvl_1">Ремни</span></a>
+                  </div>
+                  <div class="menu-catalogue__item menu-catalogue__item_lvl_1"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_1"><span class="menu-catalogue__label menu-catalogue__label_lvl_1">Свитера</span></a>
+                  </div>
+                  <div class="menu-catalogue__item menu-catalogue__item_lvl_1"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_1"><span class="menu-catalogue__label menu-catalogue__label_lvl_1">Сорочки</span></a>
+                  </div>
+                  <div class="menu-catalogue__item menu-catalogue__item_lvl_1"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_1"><span class="menu-catalogue__label menu-catalogue__label_lvl_1">Футболки и поло</span></a>
+                  </div>
+                  <div class="menu-catalogue__item menu-catalogue__item_lvl_1"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_1"><span class="menu-catalogue__label menu-catalogue__label_lvl_1">Школьная форма</span></a>
+                  </div>
+                  <div class="menu-catalogue__item menu-catalogue__item_lvl_1"><a href="javascript:void(0)" class="menu-catalogue__btn menu-catalogue__btn_lvl_1"><span class="menu-catalogue__label menu-catalogue__label_lvl_1">Шорты</span></a>
+                  </div>
+                </nav>
+                <!-- /Menu-catalogue-->
+              </aside>
+              <div class="col-sm-9"></div>
+            </div>
+          </div>
+          <article class="product-card">
+            <div class="container-fluid">
+              <div class="product-card__col product-card__col_1">
+                <div class="product-card__brand"><img src="files/pics/brands/Levi's_logo.png" title="Levi's" alt="Levi's" class="product-card__brand-img">
+                </div>
+                <h2 class="product-card__title">Джинсы мужские Levi's 511</h2>
+                <div class="product-card__price-box">
+                  <div class="product-card__price product-card__price_new">8&nbsp;500&nbsp;<span class="fa fa-rub"></span></div>
+                  <div class="product-card__price product-card__price_old">8&nbsp;900&nbsp;<span class="fa fa-rub"></span></div>
+                </div>
+              </div>
+              <div class="product-card__col product-card__col_2">
+                <div class="gallery-slider">
+                  <div class="gallery-slider__view">
+                    <div class="slick-slide loading loading_before" data-color="#4a5e84" data-size="XL">
+                      <div class="gallery-slider__view-item"><img class="gallery-slider__view-img img-object-fit contain" title="" alt="" onload="objectFit(this)" data-lazy="files/pics/products/TO030EMMTF47_3892115_2_v1.jpg">
+                      </div>
+                    </div>
+                    <div class="slick-slide loading loading_before" data-color="#4a5e84" data-size="L">
+                      <div class="gallery-slider__view-item"><img class="gallery-slider__view-img img-object-fit contain" title="" alt="" onload="objectFit(this)" data-lazy="files/pics/products/TO030EMMTF47_3892116_3_v1.jpg">
+                      </div>
+                    </div>
+                    <div class="slick-slide loading loading_before" data-color="#4a5e84" data-size="L">
+                      <div class="gallery-slider__view-item"><img class="gallery-slider__view-img img-object-fit contain" title="" alt="" onload="objectFit(this)" data-lazy="files/pics/products/TO030EMMTF47_3892117_4_v1.jpg">
+                      </div>
+                    </div>
+                    <div class="slick-slide loading loading_before" data-color="#000000" data-size="XXL">
+                      <div class="gallery-slider__view-item"><img class="gallery-slider__view-img img-object-fit contain" title="" alt="" onload="objectFit(this)" data-lazy="files/pics/products/TO030EMMTF47_3892114_1_v1.jpg">
+                      </div>
+                    </div>
+                    <div class="slick-slide loading loading_before" data-color="#000000" data-size="XL">
+                      <div class="gallery-slider__view-item"><img class="gallery-slider__view-img img-object-fit contain" title="" alt="" onload="objectFit(this)" data-lazy="files/pics/products/TO030EMMTF47_3892115_2_v1.jpg">
+                      </div>
+                    </div>
+                    <div class="slick-slide loading loading_before" data-color="#000000" data-size="XL">
+                      <div class="gallery-slider__view-item"><img class="gallery-slider__view-img img-object-fit contain" title="" alt="" onload="objectFit(this)" data-lazy="files/pics/products/TO030EMMTF47_3892116_3_v1.jpg">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="gallery-slider__thumb hidden-xs hidden-sm">
+                    <div class="gallery-slider__thumb-inner">
+                      <div class="slick-slide loading loading_before" data-color="#4a5e84" data-size="XL">
+                        <div class="gallery-slider__thumb-item"><img class="gallery-slider__thumb-img img-object-fit" title="" alt="" onload="objectFit(this)" data-lazy="files/pics/products/TO030EMMTF47_3892115_2_v1.jpg">
+                        </div>
+                      </div>
+                      <div class="slick-slide loading loading_before" data-color="#4a5e84" data-size="L">
+                        <div class="gallery-slider__thumb-item"><img class="gallery-slider__thumb-img img-object-fit" title="" alt="" onload="objectFit(this)" data-lazy="files/pics/products/TO030EMMTF47_3892116_3_v1.jpg">
+                        </div>
+                      </div>
+                      <div class="slick-slide loading loading_before" data-color="#4a5e84" data-size="L">
+                        <div class="gallery-slider__thumb-item"><img class="gallery-slider__thumb-img img-object-fit" title="" alt="" onload="objectFit(this)" data-lazy="files/pics/products/TO030EMMTF47_3892117_4_v1.jpg">
+                        </div>
+                      </div>
+                      <div class="slick-slide loading loading_before" data-color="#000000" data-size="XXL">
+                        <div class="gallery-slider__thumb-item"><img class="gallery-slider__thumb-img img-object-fit" title="" alt="" onload="objectFit(this)" data-lazy="files/pics/products/TO030EMMTF47_3892114_1_v1.jpg">
+                        </div>
+                      </div>
+                      <div class="slick-slide loading loading_before" data-color="#000000" data-size="XL">
+                        <div class="gallery-slider__thumb-item"><img class="gallery-slider__thumb-img img-object-fit" title="" alt="" onload="objectFit(this)" data-lazy="files/pics/products/TO030EMMTF47_3892115_2_v1.jpg">
+                        </div>
+                      </div>
+                      <div class="slick-slide loading loading_before" data-color="#000000" data-size="XL">
+                        <div class="gallery-slider__thumb-item"><img class="gallery-slider__thumb-img img-object-fit" title="" alt="" onload="objectFit(this)" data-lazy="files/pics/products/TO030EMMTF47_3892116_3_v1.jpg">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card__col product-card__col_1">
+                <!-- Фильтрация фото в слайдере по data-атрибутам для цвета и по value для размера, изначально в слайдере ВСЕ фото-->
+                <div class="product-card__character-row"><span class="product-card__label">Цвет:</span>
+                  <div data-color="#4a5e84" class="color-item"><span style="background-color:#4a5e84" class="color-item__icon"></span><span class="color-item__label">Синий</span></div>
+                  <div data-color="#000000" class="color-item"><span style="background-color:#000000" class="color-item__icon"></span><span class="color-item__label">Чёрный</span></div>
+                </div>
+                <div class="product-card__character-row">
+                  <label class="product-card__label">Размеры:
+                    <select data-linkcustomclass="field field_select" data-ddcustomclass="select-dd" class="select select_size">
+                      <option value="all">Выберите размер из списка</option>
+                      <option value="L">L</option>
+                      <option value="XL">XL</option>
+                      <option value="XXL">XXL</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div class="tabs">
+                <div class="tabs__separator hidden-xs"></div><a href="javascript:void(0)" data-toggle="tab" class="tabs__btn">
+                  <div class="tabs__label">Описание</div>
+                  <div class="tabs__icon"></div></a>
+                <div class="tabs__item product-card product-card__description">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <ul class="ul-list">
+                        <li>Состав <span class="black-1">Хлопок - 99%, Эластан - 1%</span></li>
+                        <li>Длина по боковому шву <span class="black-1">108 см</span></li>
+                        <li>Длина по внутреннему шву <span class="black-1">80 см</span></li>
+                        <li>Высота <span class="black-1">26 см</span></li>
+                        <li>Посадка <span class="black-1">Slim Fit</span></li>
+                        <li>Застежка <span class="black-1">на пуговицах</span></li>
+                        <li>Цвет <span class="black-1">синий</span></li>
+                        <li>Страна производства <span class="black-1">Камбоджа</span></li>
+                        <li>Сезон <span class="black-1">Мульти</span></li>
+                        <li>Стиль <span class="black-1">Повседневный</span></li>
+                        <li>Коллекция <span class="black-1">Осень-зима</span></li>
+                        <li>Узор <span class="black-1">Однотонный</span></li>
+                        <li>Потертость <span class="black-1">Без потертостей</span></li>
+                        <li>Тип джинс/брюк <span class="black-1">зауженные</span></li>
+                        <li>Карманы <span class="black-1">5</span></li>
+                        <li>Артикул <span class="black-1">TO030EMMTF47</span></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-4 black-1">
+                      <p>
+                        Джинсы от Levi’s выполнены из хлопкового денима синего цвета. Модель зауженного кроя застегивается на пуговицы.
+                        Детали: удобная посадка, три кармана спереди и два сзади, шлевки на поясе под ремень, контрастная отстрочка.
+                        
+                      </p>
+                    </div>
+                  </div>
+                </div><a href="javascript:void(0)" data-toggle="tab" class="tabs__btn">
+                  <div class="tabs__label">Отзывы к товару <strong>(2)</strong></div>
+                  <div class="tabs__icon"></div></a>
+                <div class="tabs__item product-card product-card__reviews">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <article class="review-item">
+                        <header class="review-item__header">
+                          <div class="review-item__author-name">Алексей Петров</div>
+                          <time datetime="2016-11-02" class="review-item__date">2 ноября 2016</time>
+                        </header>
+                        <div class="review-item__content">
+                          <h2 class="review-item__title">Отличные джинсы</h2>
+                          <p>
+                            Джинсы от Levi’s выполнены из хлопкового денима синего цвета. Модель зауженного кроя застегивается на пуговицы.
+                            Детали: удобная посадка, три кармана спереди и два сзади, шлевки на поясе под ремень, контрастная отстрочка.
+                          </p>
+                        </div>
+                      </article>
+                      <article class="review-item">
+                        <header class="review-item__header">
+                          <div class="review-item__author-name">Оксана Свердлова</div>
+                          <time datetime="2016-10-28" class="review-item__date">28 октября 2016</time>
+                        </header>
+                        <div class="review-item__content">
+                          <h2 class="review-item__title">Классно</h2>
+                          <p>
+                            Nunquam talem particula. Sunt animalises locus fidelis, altus toruses. Pol, a bene heuretes, dexter magister!
+                            Hilotaes mori, tanquam fidelis nutrix. Cum planeta ortum, omnes rumores resuscitabo alter, nobilis animalises.
+                          </p>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="col-md-4 black-1">
+                      <p>Если вы заказывали этот товар, поделитесь своим впечатлением о нём, и другие покупатели будут вам благодарны.</p>
+                      <div class="btns-box btns-box_type_1"><a href="popups/review-modal.html" data-toggle="modal-ajax" class="btn btn_type_1"><span class="btn__label">Оставить отзыв</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Recommended-->
+          <section class="section padding-none-bottom">
+            <header class="section__header">
+              <div class="container-fluid">
+                <h2 class="section__title">Рекомендуем</h2>
+              </div>
+            </header>
+            <!-- Products-list-->
+            <div class="products-list products-list_one-row">
+              <div class="container-fluid">
+                <div class="row">
+                  <article class="product-item product-item_label_new"><a href="item-view.html" class="product-item__img-wrap"><img class="product-item__img img-object-fit" src="files/pics/products/Levi's®--Джинсы-511---8900руб.jpg" title="Джинсы мужские синие Levi's" alt="Джинсы мужские синие Levi's" onload="objectFit(this)">
+                      <div class="product-item__overlay">
+                        <button class="product-item__btn-view btn btn_type_2" type="button"><span class="btn__label">Подробнее</span></button>
+                      </div></a>
+                    <h2 class="product-item__title"><a href="item-view.html" class="product-item__title-link">Джинсы мужские синие Levi's</a>
+                    </h2>
+                    <div class="product-item__price-box"><span class="product-item__price product-item__price_new">8&nbsp;600&nbsp;<span class="fa fa-rub"></span></span> <span class="product-item__price product-item__price_old">8&nbsp;900&nbsp;<span class="fa fa-rub"></span></span></div>
+                  </article>
+                  <article class="product-item product-item_label_new"><a href="item-view.html" class="product-item__img-wrap"><img class="product-item__img img-object-fit" src="files/pics/products/Levi's®--Джинсы-511---8500руб.jpg" title="Джинсы мужские синие Levi's" alt="Джинсы мужские синие Levi's" onload="objectFit(this)">
+                      <div class="product-item__overlay">
+                        <button class="product-item__btn-view btn btn_type_2" type="button"><span class="btn__label">Подробнее</span></button>
+                      </div></a>
+                    <h2 class="product-item__title"><a href="item-view.html" class="product-item__title-link">Джинсы мужские синие Levi's</a>
+                    </h2>
+                    <div class="product-item__price-box"><span class="product-item__price">8&nbsp;590&nbsp;<span class="fa fa-rub"></span></span></div>
+                  </article>
+                  <article class="product-item product-item_label_new"><a href="item-view.html" class="product-item__img-wrap"><img class="product-item__img img-object-fit" src="files/pics/products/United-Colors-of-Benetton-Джинсы---2799руб.jpg" title="Джинсы мужские синие United Colors of Benetton" alt="Джинсы мужские синие United Colors of Benetton" onload="objectFit(this)">
+                      <div class="product-item__overlay">
+                        <button class="product-item__btn-view btn btn_type_2" type="button"><span class="btn__label">Подробнее</span></button>
+                      </div></a>
+                    <h2 class="product-item__title"><a href="item-view.html" class="product-item__title-link">Джинсы мужские синие United Colors of Benetton</a>
+                    </h2>
+                    <div class="product-item__price-box"><span class="product-item__price">2&nbsp;799&nbsp;<span class="fa fa-rub"></span></span></div>
+                  </article>
+                  <article class="product-item product-item_label_new"><a href="item-view.html" class="product-item__img-wrap"><img class="product-item__img img-object-fit" src="files/pics/products/Topman-Джинсы---4199руб.jpg" title="Джинсы мужские синие Topman" alt="Джинсы мужские синие Topman" onload="objectFit(this)">
+                      <div class="product-item__overlay">
+                        <button class="product-item__btn-view btn btn_type_2" type="button"><span class="btn__label">Подробнее</span></button>
+                      </div></a>
+                    <h2 class="product-item__title"><a href="item-view.html" class="product-item__title-link">Джинсы мужские синие Topman</a>
+                    </h2>
+                    <div class="product-item__price-box"><span class="product-item__price">4&nbsp;190&nbsp;<span class="fa fa-rub"></span></span></div>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <!-- /Products-list-->
+          </section>
+        </section>
+      </main>
+      <!-- /Content-->
+      <!-- Footer-->
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-3 hidden-xs hidden-sm"><img src="img/logo-sm.png" title="MasterJeans" alt="MasterJeans" class="footer__logo">
+                <p>Сайт носит информационный характер. Окончательную стоимость и наличие продукции уточняйте в наших фирменных магазинах</p>
+              </div>
+              <!-- Menu-foot-->
+              <nav class="menu-foot col-sm-8 col-md-6">
+                <div class="menu-foot__item menu-foot__item_lvl_1 menu-foot__item_submenu"><a href="javascript:void(0)" class="menu-foot__btn menu-foot__btn_lvl_1"><span class="menu-foot__label menu-foot__label_lvl_1">Компания</span><span class="menu-foot__icon menu-foot__icon_lvl_1"></span></a>
+                  <div class="menu-foot__submenu menu-foot__submenu_lvl_1">
+                    <div class="menu-foot__item menu-foot__item_lvl_2"><a href="javascript:void(0)" class="menu-foot__btn menu-foot__btn_lvl_2"><span class="menu-foot__label menu-foot__label_lvl_2">О нас</span><span class="menu-foot__icon menu-foot__icon_lvl_2 icon icon-angle-right"></span></a></div>
+                    <div class="menu-foot__item menu-foot__item_lvl_2"><a href="javascript:void(0)" class="menu-foot__btn menu-foot__btn_lvl_2"><span class="menu-foot__label menu-foot__label_lvl_2">Торговая марка</span><span class="menu-foot__icon menu-foot__icon_lvl_2 icon icon-angle-right"></span></a></div>
+                    <div class="menu-foot__item menu-foot__item_lvl_2"><a href="javascript:void(0)" class="menu-foot__btn menu-foot__btn_lvl_2"><span class="menu-foot__label menu-foot__label_lvl_2">Контакты</span><span class="menu-foot__icon menu-foot__icon_lvl_2 icon icon-angle-right"></span></a></div>
+                    <div class="menu-foot__item menu-foot__item_lvl_2"><a href="javascript:void(0)" class="menu-foot__btn menu-foot__btn_lvl_2"><span class="menu-foot__label menu-foot__label_lvl_2">FAQ</span><span class="menu-foot__icon menu-foot__icon_lvl_2 icon icon-angle-right"></span></a></div>
+                  </div>
+                </div>
+                <div class="menu-foot__item menu-foot__item_lvl_1 menu-foot__item_submenu"><a href="javascript:void(0)" class="menu-foot__btn menu-foot__btn_lvl_1"><span class="menu-foot__label menu-foot__label_lvl_1">Информация</span><span class="menu-foot__icon menu-foot__icon_lvl_1"></span></a>
+                  <div class="menu-foot__submenu menu-foot__submenu_lvl_1">
+                    <div class="menu-foot__item menu-foot__item_lvl_2"><a href="javascript:void(0)" class="menu-foot__btn menu-foot__btn_lvl_2"><span class="menu-foot__label menu-foot__label_lvl_2">Уход за изделиями</span><span class="menu-foot__icon menu-foot__icon_lvl_2 icon icon-angle-right"></span></a></div>
+                    <div class="menu-foot__item menu-foot__item_lvl_2"><a href="javascript:void(0)" class="menu-foot__btn menu-foot__btn_lvl_2"><span class="menu-foot__label menu-foot__label_lvl_2">Подобрать размер</span><span class="menu-foot__icon menu-foot__icon_lvl_2 icon icon-angle-right"></span></a></div>
+                    <div class="menu-foot__item menu-foot__item_lvl_2"><a href="javascript:void(0)" class="menu-foot__btn menu-foot__btn_lvl_2"><span class="menu-foot__label menu-foot__label_lvl_2">Вопросы</span><span class="menu-foot__icon menu-foot__icon_lvl_2 icon icon-angle-right"></span></a></div>
+                    <div class="menu-foot__item menu-foot__item_lvl_2"><a href="javascript:void(0)" class="menu-foot__btn menu-foot__btn_lvl_2"><span class="menu-foot__label menu-foot__label_lvl_2">Арендодателям</span><span class="menu-foot__icon menu-foot__icon_lvl_2 icon icon-angle-right"></span></a></div>
+                    <div class="menu-foot__item menu-foot__item_lvl_2"><a href="javascript:void(0)" class="menu-foot__btn menu-foot__btn_lvl_2"><span class="menu-foot__label menu-foot__label_lvl_2">Где купить</span><span class="menu-foot__icon menu-foot__icon_lvl_2 icon icon-angle-right"></span></a></div>
+                  </div>
+                </div>
+              </nav>
+              <!-- /Menu-foot-->
+              <div class="col-sm-4 col-md-3">
+                <div class="footer__title hidden-xs">Мы в соцсетях</div>
+                <!-- Social-->
+                <div class="social hidden-xs"><a class="social__item icon icon-fb" href="javascript:void(0)" target="_blank" title="Facebook"></a><a class="social__item icon icon-tw" href="javascript:void(0)" target="_blank" title="Twitter"></a><a class="social__item icon icon-ins" href="javascript:void(0)" target="_blank" title="Instagram"></a>
+                </div>
+                <!-- /Social-->
+                <div class="payment-systems">
+                  <div class="payment-systems__item"><img src="files/pics/payment-systems/VisaLogo.png" title="Visa" alt="Visa" class="payment-systems__img">
+                  </div>
+                  <div class="payment-systems__item"><img src="files/pics/payment-systems/MasterCardLogo.png" title="MasterCard" alt="MasterCard" class="payment-systems__img">
+                  </div>
+                  <div class="payment-systems__item"><img src="files/pics/payment-systems/paypal_logo.png" title="PayPal" alt="PayPal" class="payment-systems__img">
+                  </div>
+                </div><a class="to-top-btn icon icon-circle-arrow hidden-xs" href="#"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="container-fluid">
+            <!-- Social-->
+            <div class="social hidden-sm hidden-md hidden-lg"><a class="social__item icon icon-fb" href="javascript:void(0)" target="_blank" title="Facebook"></a><a class="social__item icon icon-tw" href="javascript:void(0)" target="_blank" title="Twitter"></a><a class="social__item icon icon-ins" href="javascript:void(0)" target="_blank" title="Instagram"></a>
+            </div>
+            <!-- /Social-->
+            <div class="row">
+              <div class="footer__copyright col-sm-6">
+                <p>2016 &copy; MASTER JEANS. Все права защищены.</p>
+              </div>
+              <div class="footer__developer col-sm-6">
+                <p>Разработка сайта &mdash; <a href="//magwai.ru" target="_blank">Магвай</a></p>
+              </div>
+            </div><a class="to-top-btn icon icon-circle-arrow hidden-sm hidden-md hidden-lg" href="#"></a>
+          </div>
+        </div>
+      </footer>
+      <!-- /Footer-->
+    </div>
+  </body>
+</html>

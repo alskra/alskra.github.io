@@ -1,0 +1,20 @@
+mixin doctype(title)
+  doctype html
+  html(class="no-js" lang="ru")
+    head
+      meta(charset="utf-8")
+      meta(http-equiv="X-UA-Compatible" content="IE=edge")
+      meta(name="viewport" content="width=device-width, initial-scale=1")
+      title!= title ? title + ' &mdash; ' + pkg.name : pkg.name
+      // Favicons
+      each favicon in faviconCode.split('\n')
+        != '\n    ' + favicon
+      // CSS
+      link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,700i,800" rel="stylesheet")
+      link(href="css/main.css" rel="stylesheet")
+      // JS
+      script(src="js/components.js")
+      script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4')
+      script(src="js/main.js")
+    body.-page&attributes(attributes)
+      block

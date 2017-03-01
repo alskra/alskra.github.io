@@ -1,0 +1,57 @@
+@keyframes loading
+  100%
+    transform rotate(360deg)
+
+.loading
+  &_before
+    &:before
+      content ''
+      position absolute
+      width 30px
+      height 30px
+      border 3px solid $blue-1
+      border-right-color transparent
+      border-radius 50%
+      margin auto
+      top 0
+      left 0
+      right 0
+      bottom 0
+      animation loading 1.2s linear infinite
+
+.page
+  &_home-project
+    & {$p}__header
+      background #2a333c
+      margin 0 0 20px
+      padding 30px 0
+    & {$p}__title
+      color white
+      margin 0
+      small
+        color inherit
+  &[data-page='main']
+    .link_to-top
+      transition visibility 0s 0.15s, opacity 0.15s
+      visibility hidden
+      opacity 0
+  &[data-page='gallery']
+    .onepage-pagination
+      @media (min-width $screen-sm-min)
+        li
+          a
+            background-color #1d1c2a
+            &.active
+              background-color transparent
+              position relative
+              &:after
+                content ''
+                position absolute
+                top 100%
+                border-left 1px solid white
+                left 50%
+                height 99999px
+    .link_to-top
+      color #1d1c2a
+      .fa
+        color white
