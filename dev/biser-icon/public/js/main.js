@@ -1,6 +1,8 @@
 var $screenSm = 768,
     $screenMd = 1044;
 
-$('link').attr('media', 'all');
+$('link').each(function () {
+    $(this).attr('media', 'all').attr('href', $(this).data('href'));
+});
 
 
